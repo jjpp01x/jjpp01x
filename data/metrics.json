@@ -1,0 +1,28 @@
+{
+  "generated": "2026-07-31",
+  "method": "tests as collected by `pytest --collect-only`",
+  "repos": {
+    "dd-copilot": {
+      "commits": 38,
+      "tests": 45,
+      "last_commit": "2026-07-31"
+    },
+    "ai-readiness-matrix": {
+      "commits": 14,
+      "tests": 51,
+      "last_commit": "2026-07-31"
+    },
+    "model-card-auditor": {
+      "commits": 45,
+      "tests": 39,
+      "last_commit": "2026-07-31"
+    },
+    "ai-safety-incidents": {
+      "commits": 5,
+      "tests": 40,
+      "last_commit": "2026-07-31"
+    }
+  },
+  "total_tests": 175,
+  "total_commits": 102
+}
