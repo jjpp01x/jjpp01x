@@ -13,8 +13,8 @@
       "last_commit": "2026-07-31"
     },
     "model-card-auditor": {
-      "commits": 45,
-      "tests": 39,
+      "commits": 47,
+      "tests": 51,
       "last_commit": "2026-07-31"
     },
     "ai-safety-incidents": {
@@ -23,6 +23,6 @@
       "last_commit": "2026-07-31"
     }
   },
-  "total_tests": 175,
-  "total_commits": 102
+  "total_tests": 187,
+  "total_commits": 104
 }
