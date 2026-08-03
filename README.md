@@ -42,14 +42,14 @@ real technical due diligence.
 
 | | Tool | The question it answers | Evidence |
 |---|---|---|---|
-| 🔍 | **[DD-Copilot](https://github.com/jjpp01x/dd-copilot)** | Is this deep-tech startup's technical claim credible? | 45 tests · every citation verified against the source text |
+| 🔍 | **[DD-Copilot](https://github.com/jjpp01x/dd-copilot)** | Is this deep-tech startup's technical claim credible? | 76 tests · every citation verified against the source text |
 | ⚖️ | **[AI Readiness Matrix](https://github.com/jjpp01x/ai-readiness-matrix)** | Buy, rent or build — and where does that conclusion break? | 51 tests · 10,000 seeded scenarios · flip point per criterion |
 | ✅ | **[Model Card Auditor](https://github.com/jjpp01x/model-card-auditor)** | Is this model documented well enough to depend on? | 51 tests · 6 required fields · fails the CI build below threshold |
-| 🛡️ | **[AI Safety Incident Tracker](https://github.com/jjpp01x/ai-safety-incidents)** | How do AI systems actually fail in production? | 40 tests · 23 incidents · [live dashboard](https://ai-safety-incidents.streamlit.app) |
+| 🛡️ | **[AI Safety Incident Tracker](https://github.com/jjpp01x/ai-safety-incidents)** | How do AI systems actually fail in production? | 44 tests · 23 incidents · [live dashboard](https://ai-safety-incidents.streamlit.app) |
 
-**187 tests across the four tools**, counted as `pytest --collect-only` reports them —
+**222 tests across the four tools**, counted as `pytest --collect-only` reports them —
 the same number you get if you clone the repos and run the suites yourself. Refreshed weekly by
-[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-07-31.
+[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-08-03.
 
 <!-- METRICS:END -->
 
