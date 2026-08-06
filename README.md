@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://josepalacios.site"><img src="https://img.shields.io/badge/Website-josepalacios.site-1E2761?style=flat-square" alt="Website: josepalacios.site"/></a>
   <a href="https://www.linkedin.com/in/jose-palacios-beortegui/"><img src="https://img.shields.io/badge/LinkedIn-Connect-1E2761?style=flat-square" alt="LinkedIn profile"/></a>
-  <a href="mailto:jpalacios.contact@gmail.com"><img src="https://img.shields.io/badge/Email-jpalacios.contact@gmail.com-1E2761?style=flat-square" alt="Email: jpalacios.contact@gmail.com"/></a>
+  <a href="mailto:palaciosbeortegui@gmail.com"><img src="https://img.shields.io/badge/Email-palaciosbeortegui@gmail.com-1E2761?style=flat-square" alt="Email: palaciosbeortegui@gmail.com"/></a>
   <img src="https://img.shields.io/badge/Based%20in-Z%C3%BCrich,%20Switzerland-6B7899?style=flat-square" alt="Based in Zürich, Switzerland"/>
 </p>
 
@@ -27,13 +27,13 @@ Most evaluation work fails in one of two directions — analysts who cannot veri
 told, or engineers who can build anything but cannot say which thing is worth building. I am
 trying to be useful in the gap.
 
-> ### Everything below was built between April and July 2026.
+> ### Everything below was built between April and August 2026.
 > Commit history, test counts and live deployments are all public. **Check them.** A profile that
 > asks you to trust its numbers is exactly the kind of claim the tools below exist to catch.
 
 ---
 
-## Four tools, one thesis
+## Six tools, one thesis
 
 **A technical claim should be checkable.** Each of these answers one question that comes up in
 real technical due diligence.
@@ -56,6 +56,30 @@ the same number you get if you clone the repos and run the suites yourself. Refr
 <br/>
 
 <details>
+<summary><strong>Signal Radar</strong> — separating an emerging topic from a growing field</summary>
+
+<br/>
+
+**What it does.** Ingests arXiv, clusters papers into topics, and tests whether a topic's growth is
+distinguishable from the growth of the corpus around it. On 4,113 papers from 2023–2026 it found 66
+topics; exactly one cleared significance — vision-language-action robotic manipulation, growing
+5.00× year-on-year against a 1.58× corpus baseline, q = 0.007 after Benjamini-Hochberg across all 66
+contrasts. The output is a two-page brief a partner can read in one sitting.
+
+**Why it's built this way.** A growth ratio on its own is decoration: a topic can grow simply because
+the literature grew. So publication dates are shuffled across the whole corpus 10,000 times with
+cluster membership held fixed, and the observed growth is compared against that null. The tool also
+refuses to issue a verdict when the permutation count makes the smallest achievable q exceed alpha —
+below that floor the arithmetic, not the evidence, would be deciding every result.
+
+**What it does not do.** It measures attention, not viability. A 5× rise in papers is equally
+consistent with "this is about to work" and with "everyone has realised the previous approach fails".
+There are no patents, no funding data and no institutional affiliations — arXiv does not supply them.
+
+`Python` · `DuckDB` · `UMAP + HDBSCAN` · `sentence-transformers` · **[read the brief →](https://github.com/jjpp01x/signal-radar/blob/main/briefs/2026-08-01-embodied-vla-manipulation.md)**
+
+</details>
+<details>
 <summary><strong>DD-Copilot</strong> — from a startup's public material to a decision-ready brief</summary>
 
 <br/>
@@ -76,7 +100,28 @@ see anything the startup did not publish. It is one input to a diligence process
 `LlamaIndex (RAG)` · `Claude` · `Typer CLI` · `Streamlit` · 8 modules, ingest → report
 
 </details>
+<details>
+<summary><strong>Expert Probe</strong> — turning unresolved claims into questions that can fail</summary>
 
+<br/>
+
+**What it does.** Takes the claims DD-Copilot could not settle — the *plausible* and the
+*unsupported* ones — and turns them into an 8–10 question script for an expert call. Afterwards it
+maps the notes from that call back onto the claims and recomputes a confidence figure.
+
+**Why it's built this way.** Refuting a claim raises confidence exactly as much as confirming it
+does: the figure measures the quality of the evidence, not the health of the company, and
+deterioration of the thesis is reported on a separate axis so the two are never fused into one
+number. The recomputation is a formula with no LLM in it — determinism where it is needed, language
+where it is not. Notes are anonymised before any prompt is built, and the mapping step accepts only
+an `AnonymizedNote`, so the boundary is held by the type system rather than by a runtime check alone.
+
+**What it does not do.** It does not conduct the interview, score the expert, or decide anything. It
+produces questions whose answers would change your mind, which are the only ones worth the call.
+
+`Python` · `Pydantic` · `cryptography` · consumes DD-Copilot's `--json` output
+
+</details>
 <details>
 <summary><strong>AI Readiness Matrix</strong> — buy, rent or build, with the conclusion stress-tested</summary>
 
@@ -101,7 +146,6 @@ presented as measurements.
 `Python` · `YAML` · `Streamlit` · Dirichlet sensitivity analysis · fixed seed, exactly reproducible
 
 </details>
-
 <details>
 <summary><strong>Model Card Auditor</strong> — documentation risk, enforced in CI</summary>
 
@@ -124,7 +168,6 @@ documentation-risk tool.
 `Python` · `Hugging Face Hub` · regex + LLM fallback · CI gate
 
 </details>
-
 <details>
 <summary><strong>AI Safety Incident Tracker</strong> — how production AI actually fails</summary>
 
@@ -245,6 +288,6 @@ not cover.
   <sub>
     Open to <strong>deep-tech analyst</strong> and <strong>AI evaluation</strong> roles in Switzerland.<br/>
     <a href="https://josepalacios.site">josepalacios.site</a> ·
-    <a href="mailto:jpalacios.contact@gmail.com">jpalacios.contact@gmail.com</a>
+    <a href="mailto:palaciosbeortegui@gmail.com">palaciosbeortegui@gmail.com</a>
   </sub>
 </p>

@@ -36,11 +36,25 @@ END = "<!-- METRICS:END -->"
 # Order here is the order in the rendered table.
 FEATURED = [
     {
+        "repo": "signal-radar",
+        "icon": "📡",
+        "name": "Signal Radar",
+        "question": "Is this research area actually emerging, or is the whole field just growing?",
+        "evidence": "4,113 papers · 66 topics · 1 survives a 10,000-permutation test",
+    },
+    {
         "repo": "dd-copilot",
         "icon": "🔍",
         "name": "DD-Copilot",
         "question": "Is this deep-tech startup's technical claim credible?",
         "evidence": "every citation verified against the source text",
+    },
+    {
+        "repo": "expert-probe",
+        "icon": "🎯",
+        "name": "Expert Probe",
+        "question": "What should I ask the expert that could prove this claim wrong?",
+        "evidence": "8–10 falsifiable questions · confidence recomputed without an LLM",
     },
     {
         "repo": "ai-readiness-matrix",
@@ -64,6 +78,13 @@ FEATURED = [
         "evidence": "23 incidents · [live dashboard](https://ai-safety-incidents.streamlit.app)",
     },
 ]
+
+# Spelled out in the prose line below the table. Derived from FEATURED, never
+# hardcoded: the previous version said "four" and stayed wrong for two repos.
+NUMBER_WORDS = {
+    1: "one", 2: "two", 3: "three", 4: "four", 5: "five",
+    6: "six", 7: "seven", 8: "eight", 9: "nine", 10: "ten",
+}
 
 # pytest 9 ends with "N tests collected in 0.6s"; pytest 8 instead prints one
 # "path/to/test_file.py: N" line per file and no summary. Handle both.
@@ -168,7 +189,7 @@ def render(metrics: dict) -> str:
     total = metrics["total_tests"]
     lines += [
         "",
-        f"**{total} tests across the four tools**, counted as `pytest --collect-only` reports them —",
+        f"**{total} tests across the {NUMBER_WORDS.get(len(FEATURED), len(FEATURED))} tools**, counted as `pytest --collect-only` reports them —",
         "the same number you get if you clone the repos and run the suites yourself. Refreshed weekly by",
         f"[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified {metrics['generated']}.",
         "",
