@@ -1,11 +1,21 @@
 {
-  "generated": "2026-08-03",
+  "generated": "2026-08-06",
   "method": "tests as collected by `pytest --collect-only`",
   "repos": {
+    "signal-radar": {
+      "commits": 37,
+      "tests": 130,
+      "last_commit": "2026-08-06"
+    },
     "dd-copilot": {
-      "commits": 47,
-      "tests": 76,
-      "last_commit": "2026-07-31"
+      "commits": 50,
+      "tests": 78,
+      "last_commit": "2026-08-02"
+    },
+    "expert-probe": {
+      "commits": 27,
+      "tests": 109,
+      "last_commit": "2026-08-04"
     },
     "ai-readiness-matrix": {
       "commits": 14,
@@ -23,6 +33,6 @@
       "last_commit": "2026-07-31"
     }
   },
-  "total_tests": 222,
-  "total_commits": 115
+  "total_tests": 463,
+  "total_commits": 182
 }
