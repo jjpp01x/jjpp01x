@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-17",
+  "generated": "2026-08-24",
   "method": "tests as collected by `pytest --collect-only`",
   "repos": {
     "signal-radar": {
-      "commits": 37,
-      "tests": 130,
-      "last_commit": "2026-08-06"
+      "commits": 60,
+      "tests": 194,
+      "last_commit": "2026-08-20"
     },
     "dd-copilot": {
       "commits": 50,
@@ -33,6 +33,6 @@
       "last_commit": "2026-07-31"
     }
   },
-  "total_tests": 463,
-  "total_commits": 182
+  "total_tests": 527,
+  "total_commits": 205
 }
