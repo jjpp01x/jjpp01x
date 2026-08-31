@@ -51,7 +51,7 @@ real technical due diligence.
 
 **527 tests across the six tools**, counted as `pytest --collect-only` reports them —
 the same number you get if you clone the repos and run the suites yourself. Refreshed weekly by
-[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-08-24.
+[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-08-31.
 
 <!-- METRICS:END -->
 
