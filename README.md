@@ -47,11 +47,11 @@ real technical due diligence.
 | 🎯 | **[Expert Probe](https://github.com/jjpp01x/expert-probe)** | What should I ask the expert that could prove this claim wrong? | 109 tests · 8–10 falsifiable questions · confidence recomputed without an LLM |
 | ⚖️ | **[AI Readiness Matrix](https://github.com/jjpp01x/ai-readiness-matrix)** | Buy, rent or build — and where does that conclusion break? | 51 tests · 10,000 seeded scenarios · flip point per criterion |
 | ✅ | **[Model Card Auditor](https://github.com/jjpp01x/model-card-auditor)** | Is this model documented well enough to depend on? | 51 tests · 6 required fields · fails the CI build below threshold |
-| 🛡️ | **[AI Safety Incident Tracker](https://github.com/jjpp01x/ai-safety-incidents)** | How do AI systems actually fail in production? | 44 tests · 23 incidents · [live dashboard](https://ai-safety-incidents.streamlit.app) |
+| 🛡️ | **[AI Safety Incident Tracker](https://github.com/jjpp01x/ai-safety-incidents)** | How do AI systems actually fail in production? | 48 tests · 23 incidents · [live dashboard](https://ai-safety-incidents.streamlit.app) |
 
-**527 tests across the six tools**, counted as `pytest --collect-only` reports them —
+**531 tests across the six tools**, counted as `pytest --collect-only` reports them —
 the same number you get if you clone the repos and run the suites yourself. Refreshed weekly by
-[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-09-07.
+[`refresh-metrics.yml`](.github/workflows/refresh-metrics.yml); last verified 2026-09-14.
 
 <!-- METRICS:END -->
 
