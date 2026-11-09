@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-09",
   "method": "tests as collected by `pytest --collect-only`",
   "repos": {
     "signal-radar": {
